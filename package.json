@@ -1,0 +1,24 @@
+{
+  "name": "atividade2",
+  "version": "1.0.0",
+  "description": "atividade 2 ppi",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrodev2000/atividade2.githttps:.git"
+  },
+  "author": "Pedro Moraes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrodev2000/atividade2.githttps:/issues"
+  },
+  "homepage": "https://github.com/pedrodev2000/atividade2.githttps:#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
