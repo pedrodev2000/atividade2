@@ -59,14 +59,14 @@ app.get("/cadastroUsuarios", (requisicao, resposta) => {
 
                 <div class="col-md-4">
                     <label for="nome"  class="form-label">Nome</label>
-                    <input type="text" class="form-control is-valid" id="validationServer01" name="nome" value="" required>
+                    <input type="text" class="form-control is-valid" id="nome" name="nome" value="" required>
                     <div class="valid-feedback">
                     
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="Sobrenome" class="form-label">Sobrenome</label>
-                    <input type="text" class="form-control is-valid" id="validationServer02" sobrenome="sobrenome" value="" required>
+                    <label for="sobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control is-valid" id="sobrenome" sobrenome="sobrenome" value="" required>
                     <div class="valid-feedback">
                     
                     </div>
@@ -75,7 +75,7 @@ app.get("/cadastroUsuarios", (requisicao, resposta) => {
                     <label for="E-mail" class="form-label">E-mail</label>
                     <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                    <input type="text" class="form-control is-invalid" id="validationServerUsername" email="email" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    <input type="text" class="form-control is-invalid" id="email" email="email" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
                     <div id="validationServerUsernameFeedback" class="invalid-feedback">
                     
                     </div>
@@ -83,14 +83,14 @@ app.get("/cadastroUsuarios", (requisicao, resposta) => {
                 </div>
                 <div class="col-md-6">
                     <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" name="cidade" required>
+                    <input type="text" class="form-control is-invalid" id="cidade" aria-describedby="validationServer03Feedback" name="cidade" required>
                     <div id="validationServer03Feedback" class="invalid-feedback">
                     
                     </div>
                 </div>
                 <div class="col-md-3">
                     <label for="estado" class="form-label">Estado</label>
-                    <select class="form-select is-invalid" id="validationServer04" name="estado" aria-describedby="validationServer04Feedback" required>
+                    <select class="form-select is-invalid" id="estado" name="estado" aria-describedby="validationServer04Feedback" required>
                     <option value="" selected>Selecione um estado</option>
                     <option value="SP">São Paulo</option>
                     <option value="RJ">Rio de Janeiro</option>
@@ -109,7 +109,7 @@ app.get("/cadastroUsuarios", (requisicao, resposta) => {
                 </div>
                 <div class="col-md-3">
                     <label for="cep" class="form-label">CEP</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer05" name="cep" aria-describedby="validationServer05Feedback" required>
+                    <input type="text" class="form-control is-invalid" id="cep" name="cep" aria-describedby="validationServer05Feedback" required>
                     <div id="validationServer05Feedback" class="invalid-feedback">
                     </div>
                 </div>
@@ -131,7 +131,7 @@ app.get("/cadastroUsuarios", (requisicao, resposta) => {
 app.post("/cadastroUsuarios", (requisicao, resposta) => {
 
                             const nome = requisicao.body.nome;
-                            const Sobrenome = requisicao.body.sobrenome;
+                            const sobrenome = requisicao.body.sobrenome;
                             const email = requisicao.body.email;
                             const cep = requisicao.body.cep;
                             const cidade = requisicao.body.cidade;
@@ -170,13 +170,13 @@ app.post("/cadastroUsuarios", (requisicao, resposta) => {
 
                         <div class="col-md-4"> `;
                         if(!nome){
-                            conetudo = conteudo + `  
+                            conteudo = conteudo + `  
                             <label for="nome"  class="form-label">Nome</label>
                             <input type="text" class="form-control is-valid" id="validationServer01" name="nome" " required>
                             <span class="invalid-feedback">Campo obrigatório</span>;`
                         }
                         else{
-                                conetudo = conteudo + `
+                                conteudo = conteudo + `
                                 <label for="nome"  class="form-label">Nome</label>
                                 <input type="text" class="form-control is-valid" id="validationServer01" name="nome" value="${nome}" required>
                                  `
@@ -184,13 +184,13 @@ app.post("/cadastroUsuarios", (requisicao, resposta) => {
                             conteudo = conteudo +`</div>
                             <div class="col-md-4">`;
                               if(!sobrenome){
-                                 conteudo = conteudo + `<label for="Sobrenome" class="form-label">Sobrenome</label>
-                                <input type="text" class="form-control is-valid" id="validationServer02" sobrenome="sobrenome" required>
+                                 conteudo = conteudo + `<label for="sobrenome" class="form-label">Sobrenome</label>
+                                <input type="text" class="form-control is-valid" id="sobrenome" sobrenome="sobrenome" required>
                                 <div class="valid-feedback">
-                                <span class="invalid-feedback">Campo obrigatório</span>;
+                                <span class="invalid-feedback">Campo obrigatório</span>;`
                             }
                                 else{
-                                conteudo = conteudo + ´
+                                conteudo = conteudo + `
                                     <label for="Sobrenome" class="form-label">Sobrenome</label>
                                 <input type="text" class="form-control is-valid" id="validationServer02" value="${sobrenome}" sobrenome="sobrenome" required>
                                 <div class="valid-feedback">
@@ -246,7 +246,7 @@ app.post("/cadastroUsuarios", (requisicao, resposta) => {
                             </div>
                         
                            <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Cadastra Usuario</button>
+                            <button class="btn btn-primary" border type="submit">Cadastra Usuario</button>
                             <a class"btn-secondary" href=/">Voltar</a>
                         </div>
                         </form>
@@ -286,7 +286,7 @@ app.get("/listaUsuarios", (requisicao, resposta) => {
                 </thead>
                 <tbody>`;
               for(let i=0; i < listaUsuarios.length; i++){
-                  conetudo = conteudo + `
+                  conteudo = conteudo + `
                    <tr>
                     <td>$(listaUsuarios[i].Nome</td>
                     <td>$(listaUsuarios[i].Sobrenome</td>
